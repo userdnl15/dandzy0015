@@ -13,7 +13,6 @@
             box-sizing: border-box;
         }
 
-        /* Latar Belakang Gradien Langit Senja Shinkai */
         body {
             font-family: 'Open Sans', sans-serif;
             background: linear-gradient(to bottom, #1a1a2e, #2b1055, #7597de, #efa8b0, #f5cb5c);
@@ -34,7 +33,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* --- BAGIAN IDENTITAS SISWA --- */
+        /* --- IDENTITAS --- */
         .student-identity {
             text-align: center;
             margin-bottom: 30px;
@@ -88,7 +87,7 @@
             margin: 40px 0 20px 0;
         }
 
-        /* Grid Tokoh */
+        /* --- GRID TOKOH DENGAN 2 FOTO VERTIKAL --- */
         .characters-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -100,21 +99,36 @@
             border-radius: 10px;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .char-img-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* Menyusun gambar ke bawah */
+            gap: 2px; /* Jarak tipis antar gambar */
         }
 
         .char-img-container img {
             width: 100%;
-            height: 200px;
+            aspect-ratio: 16 / 9; /* Rasio lebar ke bawah tetap konsisten */
             object-fit: cover;
+            display: block;
         }
 
         .char-info {
-            padding: 15px;
+            padding: 20px;
         }
 
         .char-info h3 {
             color: #f5cb5c;
             margin-bottom: 10px;
+        }
+
+        .char-info p {
+            font-size: 0.9em;
+            text-align: justify;
         }
 
         /* --- BAGIAN TAMBAHAN --- */
@@ -125,24 +139,20 @@
             border: 1px dashed rgba(245, 203, 92, 0.3);
         }
 
-        /* Grid untuk dua foto */
         .tambahan-images-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Dua kolom sama rata */
+            grid-template-columns: 1fr 1fr;
             gap: 15px;
             margin-top: 20px;
         }
 
         .tambahan-image {
             width: 100%;
-            aspect-ratio: 16/9; /* Menjaga rasio tetap sinematik */
+            aspect-ratio: 16/9;
             border-radius: 8px;
             background-color: rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .tambahan-image img {
@@ -159,17 +169,9 @@
             color: #888;
         }
 
-        /* Responsif: Jika layar kecil (HP), foto jadi bertumpuk vertikal */
         @media (max-width: 600px) {
-            .tambahan-images-grid {
-                grid-template-columns: 1fr;
-            }
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
+            .tambahan-images-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8em; }
         }
     </style>
 </head>
@@ -191,7 +193,7 @@
         <section id="penjelasan">
             <h2>Sinopsis Singkat</h2>
             <p>
-                Film ini adalah mahakarya Makoto Shinkai yang menceritakan tentang <strong>Takaki Toono</strong> dan <strong>Akari Shinohara</strong>. Kisahnya terbagi menjadi tiga babak yang menggambarkan bagaimana waktu dan jarak perlahan-lahan merenggangkan hubungan manusia, meskipun perasaan di hati masih tersisa.
+                Film ini adalah mahakarya Makoto Shinkai yang menceritakan tentang <strong>Takaki Toono</strong> dan <strong>Akari Shinohara</strong>. Kisahnya terbagi menjadi tiga babak yang menggambarkan bagaimana waktu dan jarak perlahan-lahan merenggangkan hubungan manusia.
             </p>
         </section>
 
@@ -201,31 +203,37 @@
                 
                 <div class="char-card">
                     <div class="char-img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Y0AqKJBrYRWmoDc_vPYFpWVKkuC2twaj4Q&s.jpg" alt="Takaki Toono">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Y0AqKJBrYRWmoDc_vPYFpWVKkuC2twaj4Q&s.jpg" alt="Takaki 1">
+                        <img src="HMTK.jpg" alt="Takaki 2">
                     </div>
                     <div class="char-info">
                         <h3>Takaki Toono</h3>
-                        <p>Karakter utama yang terjebak dalam kenangan masa lalu dan sulit untuk beranjak maju.</p>
+                        <p><strong>Live Action:Hokuto Matsumura</strong></p>
+                        <p>Karakter utama yang terjebak dalam kenangan masa lalu dan sulit untuk beranjak maju seiring berjalannya waktu.</p>
                     </div>
                 </div>
 
                 <div class="char-card">
                     <div class="char-img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjK8vWPH3hIa9_Uayckzlkr3Uk7eIMBXtuyA&s.jpg" alt="Akari Shinohara">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjK8vWPH3hIa9_Uayckzlkr3Uk7eIMBXtuyA&s.jpg" alt="Akari 1">
+                        <img src="MTAKR.jpg" alt="Akari 2">
                     </div>
                     <div class="char-info">
                         <h3>Akari Shinohara</h3>
-                        <p>Cinta pertama Takaki yang menjadi alasan di balik surat-surat yang tak pernah terkirim.</p>
+                        <p><strong>Live Action:Mitsuki Takahata</strong></p>
+                        <p>Cinta pertama Takaki yang menjadi alasan di balik surat-surat yang tak pernah terkirim dan kerinduan yang mendalam.</p>
                     </div>
                 </div>
 
                 <div class="char-card">
                     <div class="char-img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX8otuRX7istIk8Qy8X0UzqKG3jGOFXls4MQ&s" alt="Kanae Sumida">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX8otuRX7istIk8Qy8X0UzqKG3jGOFXls4MQ&s" alt="Kanae 1">
+                        <img src="KNMS.jpg" alt="Kanae 2">
                     </div>
                     <div class="char-info">
                         <h3>Kanae Sumida</h3>
-                        <p>Gadis yang mencintai Takaki di masa SMA, namun menyadari bahwa Takaki selalu menatap sesuatu yang jauh.</p>
+                        <p><strong>Live Action:Mori Nana</strong></p>
+                        <p>Gadis yang mencintai Takaki di masa SMA, namun ia menyadari bahwa hati Takaki selalu tertuju pada sesuatu yang jauh di luar jangkauannya.</p>
                     </div>
                 </div>
 
@@ -238,15 +246,12 @@
                 <p>Pada hari Minggu,1 Maret 2026, saya mengunjungi Ebisu Cafe yang berlokasi di Grand Indonesia, Jakarta Pusat.Kafe ini berkolaborasi dengan Milou Farm House yang menyajikan masakan Japanese fusion.Saya memutuskan pergi kesana karena penasaran dengan kafe bertema Japanese Fusion tersebut dan sekalian menghabiskan waktu untuk menunggu waktu berbuka puasa(Sekalian mencoba hal mahal disana juga sihh).Saya datang kesana sendirian dengan menaiki Transjakarta dari Ragunan menuju Tosari yang bersampingan dengan Grand Indonesia tersebut.Tapi sebelum saya menuju kafenya, saya mengunjungi toko Blibli Store yang menjual HP, seperti Samsung, Iphone, Vivo, Huawei, Dan lain-lain.dan ketika waktu berbuka tiba, saya langsung mengunjungi kafe tersebut.Pertama kali masuk ke sana, disana sudah ramai dengan orang-orang yang menggemari karya dari Makoto Shinkai, seperti 5 Centimeters Persecond dan Your Name dan banyak foto-foto dan hiasan-hiasan dari kedua film tersebut.saya memesan beberapa menu disana mulai dari Sakura Peach Sorbet Tea, yaitu minuman soda bertema pohon Sakura dan Akari Heartfelt Bento, yaitu makanan yang berisi nasi,daging,sayur yang dikemas rapi(Makanan ini sama seperti yang ada di film 5 Centimeters Persecond itu sendiri).lalu saat pesanannya sudah tiba, saya mencicipinya dan ternyata rasanya benar-benar enak dan sesuai dengan yang ada di film.lalu selesai makan saya lanjut membayar dan ternyata harga yang harus saya bayar adalah RP.226.000.memang agak mahal tapi dengan tempat,suasana dan rasa makanannya sangat sesuai.Dan ketika pulang saya membeli poster dari film 5 Centimeters Persecond dengan harga RP.55.000 dan saya akhirnya pulang dalam perasaan yang puas tapi tidak dengan ending dari filmnya:)</p>
 
                 <div class="tambahan-images-grid">
-                    
                     <div class="tambahan-image">
-                        <img src="Mentahan.jpeg">
+                        <img src="Mentahan.jpeg" alt="Foto Cafe">
                     </div>
-
                     <div class="tambahan-image">
-                        <img src="Pesanan.jpeg">
+                        <img src="Pesanan.jpeg" alt="Foto Pesanan">
                     </div>
-
                 </div>
             </div>
         </section>
@@ -258,10 +263,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-

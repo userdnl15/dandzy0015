@@ -22,6 +22,30 @@
             padding: 20px;
         }
 
+        /* --- UPDATE CSS UNTUK 2 FOTO MENUMPUK KE BAWAH --- */
+        .char-img-container {
+            width: 100%;
+            /* Membuat container ini menumpuk konten ke bawah */
+            display: flex;
+            flex-direction: column;
+            gap: 2px; /* Jarak sangat kecil antar foto */
+        }
+
+        .char-img-container img {
+            width: 100%;
+            /* Membuat setiap foto memiliki rasio vertikal yang lebih tinggi, misal 2:3 */
+            aspect-ratio: 2 / 3; 
+            object-fit: cover; /* Mencegah gambar gepeng */
+            display: block; /* Menghilangkan spasi teks di bawah gambar */
+        }
+
+        .sub-header-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -172,11 +196,15 @@
         </div>
 
         <header>
-            <h1>5 Centimeters per Second</h1>
+            <h1>5 Centimeters Per Second</h1>
             <span class="tagline">"Kecepatan jatuhnya kelopak bunga sakura..."</span>
         </header>
 
         <div class="header-image"></div>
+
+        <div class="sub-header-frame">
+            <img src="Poster LA.jpg" alt=>
+        </div>
 
         <section id="penjelasan">
             <h2>Sinopsis Singkat</h2>
@@ -196,7 +224,7 @@
                     </div>
                     <div class="char-info">
                         <h3>Takaki Toono</h3>
-                        <p><strong>Live Action:Hokuto Matsumura</strong></p>
+                        <p><strong>Cast Live Action:Hokuto Matsumura</strong></p>
                         <p>Karakter utama yang terjebak dalam kenangan masa lalu dan sulit untuk beranjak maju seiring berjalannya waktu.</p>
                     </div>
                 </div>
@@ -208,7 +236,7 @@
                     </div>
                     <div class="char-info">
                         <h3>Akari Shinohara</h3>
-                        <p><strong>Live Action:Mitsuki Takahata</strong></p>
+                        <p><strong>Cast Live Action:Mitsuki Takahata</strong></p>
                         <p>Cinta pertama Takaki yang menjadi alasan di balik surat-surat yang tak pernah terkirim dan kerinduan yang mendalam.</p>
                     </div>
                 </div>
@@ -220,7 +248,7 @@
                     </div>
                     <div class="char-info">
                         <h3>Kanae Sumida</h3>
-                        <p><strong>Live Action:Mori Nana</strong></p>
+                        <p><strong>Cast Live Action:Mori Nana</strong></p>
                         <p>Gadis yang mencintai Takaki di masa SMA, namun ia menyadari bahwa hati Takaki selalu tertuju pada sesuatu yang jauh di luar jangkauannya.</p>
                     </div>
                 </div>

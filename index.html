@@ -78,7 +78,7 @@
         }
         .poster-label-box span { color: #f5cb5c; font-weight: bold; font-size: 0.85em; letter-spacing: 1px; }
 
-        /* --- TOKOH UTAMA (FRAME NUMPUK KE BAWAH) --- */
+        /* --- TOKOH UTAMA & ALUR --- */
         .horizontal-section {
             display: flex;
             gap: 20px;
@@ -96,17 +96,17 @@
 
         .char-img-container {
             display: flex;
-            flex-direction: column; /* Foto kembali numpuk ke bawah */
-            padding: 10px; /* Jarak antara foto dan tepi kartu */
-            gap: 10px; /* Jarak antar frame foto */
+            flex-direction: column;
+            padding: 10px;
+            gap: 10px;
         }
         
         .char-img-container img {
             width: 100%;
             aspect-ratio: 16/9;
             object-fit: cover;
-            border-radius: 5px; /* Frame foto sedikit melengkung */
-            border: 1px solid rgba(255, 255, 255, 0.2); /* Garis frame foto */
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             display: block;
         }
 
@@ -114,12 +114,13 @@
         .card-info h3 { color: #f5cb5c; margin-bottom: 10px; font-size: 1.1em; }
         .card-info p { font-size: 0.9em; color: #ccc; }
 
-        /* --- TAMBAHAN --- */
+        /* --- TAMBAHAN & KOMENTAR --- */
         .tambahan-content {
             background: rgba(255, 255, 255, 0.03);
             padding: 25px;
             border-radius: 10px;
             border: 1px dashed rgba(245, 203, 92, 0.3);
+            margin-bottom: 20px;
         }
         .tambahan-images-grid {
             display: grid;
@@ -142,26 +143,25 @@
             <p></p>
         </div>
 
-        <h1>5 Centimeters Per Second</h1>
+        <h1>5 Centimeters per Second</h1>
         <span class="tagline">"Kecepatan jatuhnya kelopak bunga sakura..."</span>
 
         <div class="poster-container">
             <div class="poster-box poster-box-anime">
                 <div class="anime-img-wrapper"><img src="Poster.jpg" alt="Anime"></div>
-                <div class="poster-label-box"><span></span></div>
+                <div class="poster-label-box"><span>VERSI ANIME</span></div>
             </div>
             <div class="poster-box poster-box-live">
                 <div class="live-img-wrapper">
                     <img src="Poster LA.jpg" alt="Live Action">
                 </div>
-                <div class="poster-label-box"><span></span></div>
+                <div class="poster-label-box"><span>VERSI LIVE ACTION</span></div>
             </div>
         </div>
 
         <section id="tokoh">
             <h2>Tokoh Utama</h2>
             <div class="horizontal-section">
-                
                 <div class="side-card">
                     <div class="char-img-container">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Y0AqKJBrYRWmoDc_vPYFpWVKkuC2twaj4Q&s.jpg">
@@ -169,7 +169,7 @@
                     </div>
                     <div class="card-info">
                         <h3>Takaki Toono</h3>
-                        <p><strong>Cast Live Action:Hokuto Matsumura</strong></p>
+                        <p><strong>Cast Live Action: Hokuto Matsumura</strong></p>
                         <p>Karakter utama yang terjebak dalam kenangan masa lalu dan sulit untuk beranjak maju seiring berjalannya waktu.</p>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                     </div>
                     <div class="card-info">
                         <h3>Akari Shinohara</h3>
-                        <p><strong>Cast Live Action:Mitsuki Takahata</strong></p>
+                        <p><strong>Cast Live Action: Mitsuki Takahata</strong></p>
                         <p>Cinta pertama Takaki yang menjadi alasan di balik surat-surat yang tak pernah terkirim dan kerinduan yang mendalam.</p>
                     </div>
                 </div>
@@ -193,34 +193,31 @@
                     </div>
                     <div class="card-info">
                         <h3>Kanae Sumida</h3>
-                        <p><strong>Cast Live Action:Mori Nana</strong></p>
+                        <p><strong>Cast Live Action: Mori Nana</strong></p>
                         <p>Gadis yang mencintai Takaki di masa SMA, namun ia menyadari bahwa hati Takaki selalu tertuju pada sesuatu yang jauh di luar jangkauannya.</p>
                     </div>
                 </div>
-
             </div>
-        </section>  
+        </section>
 
         <section id="alur">
             <h2>Alur Cerita</h2>
             <div class="horizontal-section">
-                
                 <div class="side-card">
                     <div class="card-info">
-                        <h3>Anime</h3>
+                        <h3>Versi Anime</h3>
                         <p>Nanti nyusul</p>
                     </div>
                 </div>
-
                 <div class="side-card">
                     <div class="card-info">
-                        <h3>Live Action</h3>
-                        <p>Rewatch live action dulu</p>
+                        <h3>Versi Live Action</h3>
+                        <p>Rewatch live actionnya dulu</p>
                     </div>
                 </div>
-
             </div>
         </section>
+
         <section id="tambahan">
             <h2>Tambahan (Catatan Perjalanan)</h2>
             <div class="tambahan-content">
@@ -229,6 +226,29 @@
                     <div class="tambahan-image"><img src="Mentahan.jpeg"></div>
                     <div class="tambahan-image"><img src="Pesanan.jpeg"></div>
                 </div>
+            </div>
+        </section>
+
+        <section id="komentar">
+            <h2>Komentar</h2>
+            <div class="tambahan-content">
+                <p>Dari anime dan live actionnya meski ada kontra soal jarangnya komunikasi meski ini berlatar tahun 90an dan telat menyampaikan perasaan,tapi yang bisa gw pelajari adalah bukan hanya tentang kisah cinta jarak jauh tapi tentang masa depan,keinginan hati yang kuat dan kenangan masa lalu.walaupun mereka adalah teman masa kecil tapi yang namanya hidup terus berjalan dan dipaksa berpisah oleh keadaan,mereka mulai melupakan satu sama lain dan memulai hidup barunya ketika dewasa meskipun mereka menyimpan memori tentang kenangan diantara mereka yang saling terhubung,salah satunya adalah ketertarikan pada luar angkasa.mereka hampir bertemu dibeberapa tempat dan situasi tapi karena kesibukan satu sama lain yang membuat mereka tak dapat bertemu sampai diending mereka tak saling sapa bagaikan orang asing.Rating keduanya 9.0</p>
+                <br>
+                <p>Selanjutnya adalah banyak yang bilang kalo film ini tentang kutukan antara Takaki dan Akari.karena kedua karakter itu masih mengingat masing-masing kenangan yang ada walaupun mereka udh ngak ketemu lagi pas dewasa(ibaratnya gamonnya kebawa ampe dewasa)dan ini cukup relate buat beberapa orang yang emang ngk bisa lupain masalalunya.</p>
+                <br>
+                <p>Tapi pertanyaan dari gw adalah:</p>
+                <br>
+                <p>Jika memang masalalu itu menyenangkan,kenapa harus berakhir?kenapa ngk coba lanjutin lagi hubungan yang lama?lagipula saat dewasa mereka bisa ketemuan kapan aja</p>
+                <br>
+                <p>🗣️:tapi nil mereka kan udh lama ngk ketemu ampe lupa satu sama lain.sibuk ama urusan masing-masing.bahkan di versi animenya mereka ternyata udh punya pasangan baru</p>
+                <br>
+                <p>Iya gw tau mereka ternyata di chapter 3 ternyata udh ada pasangan,tapi kalo kita merujuk ke filmnya,kadang mereka itu masih berkomunikasi dengan hp jadul mereka tapi entah karena apa mereka ngk ada rencana buat ketemuan bareng gitu,kafe bareng gituu,ke taman mana gitu.apalagi gw greget banget di live actionnya yang dibeberapa tempat mereka bisa aja ketemu,contoh pas di perpustakaan,planetarium,taman tapi mereka kek saling ngk nyadar keberadaan satu sama lain.</p>
+                <br>
+                <p>Gw juga liat di komentar beberapa konten yang membahas film ini ada yang bilang kalo Akari berkata kek masa lalu dia yang akhirnya membentuk dirinya yang sekarang.</p>
+                <br>
+                <p>Gw ngerti maksudnya.jadi kek orang di masalalu itu dapat mengubah pola pikir mu dimasa depan yang bisa saja membantumu jadi lebih kuat dan pastinya ada pelajaran yang bisa diambil dari masalalu kita.seperti masa kangennya,masa dikuat²annya,dan salah satunya adalah masa dimana kita merasa dicintai,karena jika dimasa depan kita merasa ngk ada yang mencintai kita,kita otomatis ingat bahwa kita pernah merasakan yang namanya dicintai walaupun itu sudah masa lampau.jadi kesimpulannya masalalu itu jika tidak membantu sedikit dimasa lalu bisa saja sangat membantu dimasa depan.</p>
+                <br>
+                <p>Lalu dikomentar yang lain ada yang berpendapat bahwa atasannya Takaki pas di planetarium adalah perwujudan dari Makoto Shinkai selaku direktor dari film ini yang ingin menyampaikan pesan ke Akari dan menurut gw cocok sihh.karena...</p>
             </div>
         </section>
 
